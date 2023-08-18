@@ -1,0 +1,22 @@
+---
+import { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  img: ImageMetadata;
+  calidad?: string;
+  alt: string;
+  ImgClass: string;
+  ancho?: number;
+}
+const { img, calidad = "mid", alt, ImgClass, ancho } = Astro.props;
+---
+
+<Image
+  src={img}
+  quality={calidad}
+  format="avif"
+  alt={alt}
+  class={ImgClass}
+  width={ancho}
+/>

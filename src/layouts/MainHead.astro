@@ -1,0 +1,14 @@
+---
+import { SEO } from "astro-seo";
+
+const { seoTitle, seoDesc } = Astro.props;
+---
+
+<head>
+  <SEO title={seoTitle} description={seoDesc} />
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/CoffeeS/logo.svg" />
+  <meta name="generator" content={Astro.generator} />
+</head>
